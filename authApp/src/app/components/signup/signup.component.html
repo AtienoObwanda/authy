@@ -10,18 +10,17 @@
     </div>
 
     <!--Username-->
-    <input required type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Username">
+    <input [(ngModel)]="register.username" required type="text" class="form-control mb-4" placeholder="Username">
     <!-- E-mail -->
-    <input required type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+    <input [(ngModel)]="register.email" required type="email"  class="form-control mb-4" placeholder="E-mail">
     <!-- Password -->
-    <input required type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password"
-      aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <input [(ngModel)]="register.password" required type="password" class="form-control" placeholder="Password">
     
 
       
 
     <!-- Sign up button -->
-    <button mdbBtn color="info" block="true" class="my-4" type="submit">Sign Up</button>
+    <button (click)="userRegister()" mdbBtn color="info" block="true" class="my-4" type="submit">Sign Up</button>
     <!-- Social register -->
     <p>Already have an accout?</p>
     <span>
