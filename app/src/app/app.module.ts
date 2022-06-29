@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +25,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    MdbCheckboxModule
     
   ],
   providers: [],

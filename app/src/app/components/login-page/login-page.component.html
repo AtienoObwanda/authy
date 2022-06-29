@@ -1,15 +1,34 @@
-<div>
-    <h1>Hi Welcome Back</h1>
-     <h3>Login Here</h3>
-      <form>
-        <div>
-          <label for="email">Email</label>
-          <input  required  type="text">
-          <label for="password">Password</label>
-          <input  type="password">
-        </div>
-        <button>Submit</button>
-        <span>Don't have an account? 
-        <a routerLink="/signUp">signUp</a></span>
-      </form>
+
+  <div class="container">
+    <p class="h4 text-center mb-4 mt-5 pt-5">Sign in</p>
+
+    <div class="row">
+      
+      <div class="col">
+    <img src="https://png.pngtree.com/png-vector/20190725/ourlarge/pngtree-message-icon-design-vector-png-image_1587713.jpg" alt="IMG">	
   </div>
+    <div class="col">
+        <form class="text-center border border-light p-5">
+          <div class="form-group pt-2 pl-1">
+              <input  id="defaultLoginFormEmail" class="form-control mb-4"  placeholder="E-Mail" type="email">
+            </div>
+
+          <div class="form-group pl-1">
+            <input  id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" type="password">
+          </div>
+              <!-- <div class="col-md-3 offset-md-9"> -->
+                <button mdbBtn color="info" block="true" class="my-4" type="submit">Sign in</button>
+              <!-- </div> -->
+              <p>Don't have an account? 
+                <a routerLink="/signUp">signUp</a></p> 
+          
+            
+          </form>
+          
+    </div><!--col-->
+  </div><!--row-->
+    
+  </div>
+
+  
+<!-- Default form login -->
