@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { UserService } from 'src/app/service/user.service';
 
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['./signup.component.scss'],
+  providers: [UserService]
+
 })
 export class SignupComponent implements OnInit {
   register:any;
 
-
+  constructor(private userService: UserService){}
   ngOnInit() {
     this.register = {
       username:'',
@@ -24,7 +24,8 @@ export class SignupComponent implements OnInit {
 }
 
 userRegister(){
-  
+  // this.userService.register().subscribe
+
 }
 
 // signUp(){
