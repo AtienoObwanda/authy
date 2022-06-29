@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders'
+    'rest_framework.authtoken',
+    'corsheaders',
     'api'
 ]
 
@@ -53,6 +54,19 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
+# CORS_ALLOWED_ORIGINS = [
+# # Add domains
+# "http://localhost:4200/",
+
+# ]
+CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+
+CORS_ORIGIN_WHITELIST = [
+# Add domains,
+'http://localhost:4200'
+
+]
+
 
 ROOT_URLCONF = 'Authy.urls'
 

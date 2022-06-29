@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,8 +13,9 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class SignupComponent implements OnInit {
   register:any;
+  // constructor(private http: HttpClient, private router: Router) { }
 
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService, private router: Router) {}
   ngOnInit() {
     this.register = {
       username:'',
@@ -24,23 +27,18 @@ export class SignupComponent implements OnInit {
 }
 
 userRegister(){
+  // console.log(this.register)
+
   this.userService.newUserRegister(this.register).subscribe(
     response => {
       alert('User  ' + this.register.username + ' has been registered successfully!')
+      this.router.navigate(["login"])
     },
     error => console.log('error', error)
   );
 
 }
 
-// signUp(){
-//   this.http.post<any>("http://localhost:3000/signupUsersList",this.signUpForm.value)
-//   .subscribe(res=>{
-//     alert('SIGNIN SUCCESFUL');
-//     this.signUpForm.reset()
-//     this.router.navigate(["login"])
-//   },err=>{
-//     alert("Something went wrong")
-//   })
-// }
+
+
 }
