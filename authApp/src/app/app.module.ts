@@ -4,10 +4,20 @@ import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SignupUpPageComponent } from './components/signup-up-page/signup-up-page.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignupUpPageComponent,
+    SignupComponent,
+    LoginComponent,
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
