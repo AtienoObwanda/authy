@@ -24,7 +24,12 @@ export class SignupComponent implements OnInit {
 }
 
 userRegister(){
-  // this.userService.register().subscribe
+  this.userService.newUserRegister(this.register).subscribe(
+    response => {
+      alert('User  ' + this.register.username + ' has been registered successfully!')
+    },
+    error => console.log('error', error)
+  );
 
 }
 
